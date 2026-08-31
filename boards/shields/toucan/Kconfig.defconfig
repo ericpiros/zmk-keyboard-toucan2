@@ -31,3 +31,14 @@ config RGBLED_WIDGET_BATTERY_LEVEL_HIGH
     default 40
 
 endif
+
+if SHIELD_TOUCAN_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "TOUCAN2"
+    
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_USB
+    default y
