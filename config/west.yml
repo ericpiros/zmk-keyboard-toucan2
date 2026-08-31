@@ -8,6 +8,9 @@ manifest:
       url-base: https://github.com/geeksville
     - name: beekeeb
       url-base: https://github.com/beekeeb
+    # Prospector Repo
+    - name: carrefinho
+      url-base: https://github.com/carrefinho 
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -22,5 +25,9 @@ manifest:
     - name: zmk-input-zoom
       remote: beekeeb
       revision: main
+    # Prospector Repo
+    - name: prospector-zmk-module
+      remote: carrefinho
+      revision: main  
   self:
     path: config
