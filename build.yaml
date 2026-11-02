@@ -19,11 +19,32 @@
 #
 ---
 include:
+  # Dongle (Central)
+  - board: seeeduino_xiao_ble
+    shield: toucan_dongle rgbled_adapter
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: toucan_dongle
+
+  # Left Half (Peripheral - for use with Dongle)
+  - board: seeeduino_xiao_ble
+    shield: toucan_left rgbled_adapter nice_view_gem
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: toucan_left_peripheral
+
+  # Left Half (Central - standalone without Dongle)
   - board: seeeduino_xiao_ble
     shield: toucan_left rgbled_adapter nice_view_gem
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: toucan_left
+
+  # Right Half (Peripheral)
   - board: seeeduino_xiao_ble
     shield: toucan_right rgbled_adapter
+    artifact-name: toucan_right
+
+  # Settings Reset (to reset Bluetooth bonds if needed)
   - board: seeeduino_xiao_ble
     shield: settings_reset
+    artifact-name: settings_reset
