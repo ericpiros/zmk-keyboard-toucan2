@@ -81,5 +81,6 @@
 };
 
 &trackpad_split {
+    status = "okay";
     device = <&tps43_trackpad>;
 };
