@@ -57,10 +57,4 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
 
-# Turn off sleep as dongle is plugged in usb
-config ZMK_SLEEP n
-
-# Enable usb booting
-config ZMK_USB_BOOT y
-
 endif
